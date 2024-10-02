@@ -55,3 +55,7 @@ with open(filename, "wb") as f:
 client_socket.close()
 # close the server socket
 s.close()
+
+user_input = input("\nPlease enter q to quit")
+if user_input == "q":
+    quit()

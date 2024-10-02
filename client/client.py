@@ -43,3 +43,7 @@ with open(filename, "rb") as f:
         progress.update(len(bytes_read))
 # close the socket
 s.close()
+
+user_input = input("\nPlease enter q to quit")
+if user_input == "q":
+    quit()
