@@ -1,28 +1,32 @@
 import socket
 import tqdm
 import os
+import time
+import sys
+import ipaddress
+import tkinter as tk
+from tkinter.filedialog import askopenfilename
+from modules import client_functions as cf
 
-print(os.getcwd())
+print("[+] Client started.")
+time.sleep(2)
+os.system("cls")
 
-SEPARATOR = "<SEPARATOR>"
-BUFFER_SIZE = 4096 # send 4096 bytes each time step
+"""
+tk.Tk().withdraw()
+fn = askopenfilename()
+print("user chose", fn)
 
-# the ip address or hostname of the server, the receiver
-host = "192.168.0.20"
-# the port, let's use 5001
-port = 5001
+time.sleep(2)
+"""
+
+cf.menu()
+
+"""
 # the name of file we want to send, make sure it exists
 filename = os.path.join(os.path.dirname(__file__), "test.txt")
 # get the file size
 filesize = os.path.getsize(filename)
-
-s = socket.socket()
-
-print(f"[+] Connecting to {host}:{port}")
-
-s.connect((host, port))
-
-print("[+] Connected.")
 
 # send the filename and filesize
 s.send(f"{filename}{SEPARATOR}{filesize}".encode())
@@ -47,3 +51,4 @@ s.close()
 user_input = input("\nPlease enter q to quit")
 if user_input == "q":
     quit()
+"""

@@ -1,6 +1,7 @@
 import socket
 import tqdm
 import os
+
 # device's IP address
 SERVER_HOST = "0.0.0.0"
 SERVER_PORT = 5001
