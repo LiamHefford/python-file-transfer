@@ -38,7 +38,7 @@ def connect():
     
     SEPARATOR = "<SEPARATOR>"
     BUFFER_SIZE = 4096
-    host = "0.0.0.0"
+    host = "192.168.0.63"
     port = 5001
     s = socket.socket()
 
